@@ -1,0 +1,108 @@
+@layer tailwind-base, primereact, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+:root {
+  --dm-primary: rgb(0, 155, 255);
+}
+
+#document-viewer {
+  .rpv-core__page-layer {
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  .rpv-core__inner-page {
+    background-color: transparent;
+  }
+  .rpv-core__doc-loading {
+    padding: 0;
+    background-color: transparent;
+    margin: 0;
+  }
+}
+
+/* THEME OVERRIDES */
+/* MESSAGE */
+/* USE BODY INSTEAD OF #root because modals render outside of root */
+body {
+  .p-inline-message.p-inline-message-info {
+    background: #e9f6ff;
+    border: solid #3180ff;
+    border-width: 0px;
+    color: #3180ff;
+
+    .p-inline-message-icon {
+      color: #3180ff;
+    }
+  }
+  .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: #043d75;
+  }
+  .p-accordion .p-accordion-header:not(.p-disabled) .p-accordion-header-link:focus {
+    box-shadow: none !important;
+  }
+
+  .pulse-shadow-primary {
+    box-shadow: 0 0 0 rgba(0, 155, 255, 0.8);
+    animation: pulse 2s infinite;
+  }
+  /* SELECT BUTTON */
+  .p-buttonset .p-button {
+    margin: 0;
+  }
+  .p-buttonset .p-button:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .p-buttonset .p-button:last-of-type {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .p-buttonset .p-button:not(:first-of-type):not(:last-of-type) {
+    border-radius: 0;
+  }
+  .p-buttonset .p-button:not(:last-child) {
+    border-right: 0 none;
+  }
+
+  /* Fieldset */
+  .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
+    padding: .75rem 1rem;
+  }
+}
+
+:root {
+  --maskbg: rgba(0, 0, 0, 0.3) !important;
+}
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 155, 255, 0.8);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 155, 255, 0.5);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 155, 255, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(0, 155, 255, 0.8);
+    box-shadow: 0 0 0 0 rgba(0, 155, 255, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(0, 155, 255, 0.5);
+    box-shadow: 0 0 0 10px rgba(0, 155, 255, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(0, 155, 255, 0);
+    box-shadow: 0 0 0 0 rgba(0, 155, 255, 0);
+  }
+}
