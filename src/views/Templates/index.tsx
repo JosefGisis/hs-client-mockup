@@ -11,8 +11,8 @@ import { Button } from 'primereact/button';
 import TemplateListEmptyState from './components/TemplateListEmptyState';
 import { useNavigate } from 'react-router-dom';
 
-import { templates } from '../../../mockups/templates';
-import type { TemplateType } from '../../../mockups/types';
+import { templates } from '../../mockups/templates';
+import type { TemplateType } from '../../mockups/types';
 
 type ActiveOption = 'all' | 'active' | 'inactive';
 
@@ -26,7 +26,7 @@ export default function Templates() {
   const [activeFilter, setActiveFilter] = useState<ActiveOption>('all');
 
   const navigate = useNavigate();
-  
+
   const templatesList: TemplateType[] = templates;
   const [layout, setLayout] = useState<any>('grid');
 

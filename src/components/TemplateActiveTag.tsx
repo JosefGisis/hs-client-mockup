@@ -1,7 +1,7 @@
-import { Template } from '../app/api/types';
+import type { TemplateType } from '../mockups/types';
 import { Tag } from 'primereact/tag';
 
-const TemplateActiveTag = ({ template }: { template: Template }) => {
+const TemplateActiveTag = ({ template }: { template: TemplateType }) => {
   const { isActive } = template;
 
   return (

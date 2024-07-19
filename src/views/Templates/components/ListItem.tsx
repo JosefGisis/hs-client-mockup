@@ -4,7 +4,7 @@ import TemplateActiveTag from '../../../components/TemplateActiveTag';
 import * as dateFns from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 
-import type { TemplateType } from '../../../../mockups/types';
+import type { TemplateType } from '../../../mockups/types';
 
 interface Props {
   template: TemplateType;

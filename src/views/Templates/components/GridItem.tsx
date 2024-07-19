@@ -2,7 +2,7 @@ import React from 'react';
 import { Badge } from 'primereact/badge';
 import * as dateFns from 'date-fns';
 
-import type { TemplateType } from '../../../../mockups/types';
+import type { TemplateType } from '../../../mockups/types';
 import { useNavigate } from 'react-router-dom';
 
 interface Props {
